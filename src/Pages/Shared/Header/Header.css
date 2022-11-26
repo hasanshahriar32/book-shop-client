@@ -1,0 +1,38 @@
+.navbar-nav .nav-link{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+.nav-logo{
+    width: 60px;
+}
+.nav-btn{
+    margin: 0 !important;
+}
+.text-btn{
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+@media only screen and (max-width: 600px){
+    .navbar-nav{
+        margin: 15px 0;
+    }
+    .navbar-nav .nav-link{
+        margin: 0 auto;
+    }
+    .navbar-toggler{
+        color: #fff;
+    }
+    .user-img{
+       display: none;
+    }
+    .log-out{
+      margin-right: 0 !important;
+      width: 100%;
+      margin: 10px auto;
+    }
+    .text-btn{
+        width: 100%;
+    }
+  }
