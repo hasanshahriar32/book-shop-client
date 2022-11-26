@@ -4,6 +4,7 @@ import banner2 from '../../../images/banner2.png'
 import banner3 from '../../../images/banner3.png'
 import Carousel from 'react-bootstrap/Carousel';
 import './Banner.css';
+import About from '../About/About';
 
 const Banner = () => {
     return (
@@ -30,7 +31,11 @@ const Banner = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+            <section>
+                <About></About>
+            </section>
         </div>
+
     );
 };
 

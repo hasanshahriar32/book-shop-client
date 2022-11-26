@@ -1,0 +1,20 @@
+.about-container{
+    margin-top: 60px;
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+}
+.about-icon{
+    font-size: 32px;
+    color: #fff;
+}
+.about-num{
+    font-size: 26px;
+    font-weight: 700;
+    padding-top: 5px;
+}
+.about-text{
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 5px;
+}
