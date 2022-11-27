@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Container, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import logo from '../../../images/logo.png'
 import Nav from 'react-bootstrap/Nav';
@@ -9,8 +9,10 @@ import { Link } from 'react-router-dom';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import './Header.css';
+import { AuthContext } from '../../../Context/UserContext';
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext)
     return (
         <Navbar style={{background: 'linear-gradient(to right, #0033cc 0%, #cc0099 100%)',}}   expand="lg">
       <Container>
@@ -25,7 +27,7 @@ const Header = () => {
             <Nav.Link as={Link} to="/my-reviews">My Order</Nav.Link>
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
           </Nav>
-          {/* <Nav >
+          <Nav >
             {
               user?.uid ?
                 <button className='log-out' onClick={logOut}>Log Out</button>
@@ -45,7 +47,7 @@ const Header = () => {
             }</Nav.Link>
           </OverlayTrigger></div>
             
-          </Nav> */}
+          </Nav>
         </Navbar.Collapse>
       </Container>
         </Navbar>
