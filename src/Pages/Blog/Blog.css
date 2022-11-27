@@ -1,0 +1,32 @@
+/* .blog-container{
+    background-color: rgba(128, 128, 128, 0.425);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+.blog-container .overlay-blog{
+    background: linear-gradient(to right, #33ccff64 0%, #ff99cc62 100%);
+    margin-bottom: 60px;
+    padding-bottom: 100px;
+}
+.blog-container .accordion{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.blog-container .accordion .accordion-button {
+    font-size: 22px;
+    font-weight: 500;
+}
+@media only screen and (max-width: 600px){
+    .blog-container .accordion {
+        width: 93%;
+        margin: 0 auto;
+    }
+    .blog-container .overlay-blog{
+        margin-bottom: 0;
+        padding-bottom: 60px;
+    }
+    .blog-container .accordion{
+        padding-top: 60px;
+    }
+}
