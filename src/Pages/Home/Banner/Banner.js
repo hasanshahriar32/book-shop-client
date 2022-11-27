@@ -5,6 +5,7 @@ import banner3 from '../../../images/banner3.png'
 import Carousel from 'react-bootstrap/Carousel';
 import './Banner.css';
 import About from '../About/About';
+import Categories from '../Category/Categories';
 
 const Banner = () => {
     return (
@@ -31,6 +32,9 @@ const Banner = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+            <section>
+                <Categories></Categories>
+            </section>
             <section>
                 <About></About>
             </section>

@@ -3,7 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import './Blog.css'
 
 const Blog = () => {
-    let title = "Squid Food -Blog";
+    let title = "Book Shop -Blog";
     document.title = title;
     return (
         <div className='blog-container'>
