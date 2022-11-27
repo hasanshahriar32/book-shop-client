@@ -1,0 +1,32 @@
+.error-container{
+    background-image: url(../../images/error.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+.btn-error{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    background: linear-gradient(to right, #0033cc 0%, #cc0099 100%);
+    color: #fff;
+    transition: .6s;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+.btn-error:hover{
+    background: linear-gradient(to right, #0aaee4 0%, #fc5ead 100%);
+}
+
+@media only screen and (max-width: 600px){
+    .btn-error {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 10px 21px;
+    }
+}
