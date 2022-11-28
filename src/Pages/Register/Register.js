@@ -6,7 +6,7 @@ import { AuthContext } from '../../Context/UserContext';
 
 
 const Register = () => {
-    let title = "Squid Food -Register";
+    let title = "Book Shop -Register";
     document.title = title;
     const [error, setError] = useState(null);
     const {createUser} = useContext(AuthContext)

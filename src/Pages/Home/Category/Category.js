@@ -1,18 +1,18 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 
 const Category = ({caty}) => {
-    console.log(caty)
-    const {name, img} = caty;
+    const {name, img , _id} = caty;
     
     return (
           <Card >
             <Card.Img className='img_container' variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <Button variant="primary">Go somewhere</Button>
+                <Link to={`/allbooks/${_id}`}><Button variant="primary">Go somewhere</Button></Link>
             </Card.Body>
           </Card>
     );
