@@ -12,7 +12,7 @@ const Category = ({caty}) => {
             <Card.Img className='img_container' variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <Link to={`/allbooks/${_id}`}><Button variant="primary">Go somewhere</Button></Link>
+                <Link to={`/allbooks/${_id}`}><button className='book_btn' variant="primary">See Books</button></Link>
             </Card.Body>
           </Card>
     );

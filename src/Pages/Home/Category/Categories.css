@@ -8,3 +8,8 @@
     width: 100%;
     height: 260px;
 }
+@media only screen and (max-width: 600px){
+    .category_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

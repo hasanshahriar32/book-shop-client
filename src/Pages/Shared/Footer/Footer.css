@@ -1,0 +1,15 @@
+.footer-container{
+    margin-top: 40px;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    padding: 20px 0;
+}
+.footer-icon{
+    background: #fff !important;
+    margin: 5px 10px;
+    color: #a64dff !important;
+}
+.text-center{
+    color: rgb(35, 35, 35);
+    font-weight: 600;
+    
+}

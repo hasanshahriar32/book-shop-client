@@ -9,7 +9,10 @@ const Books = ({books}) => {
         <Card >
             <Card.Img className='img_container' variant="top" src={img_url} />
             <Card.Body>
-                <Card.Title>{name}</Card.Title>
+                <h3>{name}</h3>
+                <h5>Product Price: {original_price}</h5>
+                <h5>Resell Price: {resale_price}</h5>
+                <h6>Uses: {years_of_use}</h6>
                 <BookingModal
                     books={books}                
                 >

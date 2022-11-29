@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useLoaderData } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
+import './BookingModal.css'
 
 const BookingModal = ({books}) => {
     const { name, location, original_price, resale_price, seller_name, years_of_use, img_url, category_id } = books;
@@ -11,19 +12,38 @@ const BookingModal = ({books}) => {
     const handleShow = () => setShow(true);
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <button className='book_btn' onClick={handleShow}>
                 Book Now
-            </Button>
+            </button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{original_price}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Body>
+        <Form>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="text" placeholder="Name" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="email" placeholder="name@email.com" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="number" placeholder="Number" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="email" placeholder="name@example.com" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="email" placeholder="name@example.com" />
+      </Form.Group>
+
+    </Form>
+        </Modal.Body>
+        <Modal.Footer className='mx-auto p-0 pb-2'>
+          <button className='text-center book_btn pe-5 ps-5' onClick={handleClose}>
             Submit
-          </Button>
+          </button>
         </Modal.Footer>
       </Modal>
         </>
