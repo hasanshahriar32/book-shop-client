@@ -21,7 +21,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto nav-item text-white">
+          <Nav className="ms-auto nav-item text-white">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/services">Catagories</Nav.Link>
             <Nav.Link as={Link} to="/my-reviews">My Order</Nav.Link>
@@ -30,7 +30,10 @@ const Header = () => {
           <Nav >
             {
               user?.uid ?
-                <button className='log-out' onClick={logOut}>Log Out</button>
+              <>
+                <li><Link className=" nav-link" to={'/dashboard'}>Dashboard</Link></li>
+                <li className='d-flex align-items-center'><button className='log-out ' onClick={logOut}>Log Out</button></li>
+              </>
               :
               <>
                 <Nav.Link className='nav-btn ' as={Link} to="/login"><Button className='text-btn' variant="outline-dark">Login</Button></Nav.Link>

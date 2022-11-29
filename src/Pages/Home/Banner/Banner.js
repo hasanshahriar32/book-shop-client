@@ -14,21 +14,21 @@ const Banner = () => {
           <Carousel.Item className="slide">
             <img className="d-block w-100" src={banner1} alt="First slide" />
             <Carousel.Caption className="slide-text">
-            <p className='title'>Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service.</p>
+            <p className='title'>Dive into the Guardian's Books Blog to discover a variety of engrossing articles on the books we know and love and their effects on us.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="slide">
             <img className="d-block w-100" src={banner2} alt="Second slide" />
   
             <Carousel.Caption className="slide-text">
-              <p className='title'>Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service.</p>
+              <p className='title'>Tidy and modern, Flavorwire offers several monthly articles that examine both time-honored classics and contemporary publications. </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="slide">
             <img className="d-block w-100" src={banner3} alt="Third slide" />
   
             <Carousel.Caption className="slide-text">
-            <p className='title'>Fast food is a type of mass-produced food designed for commercial resale, with a strong priority placed on speed of service.</p>
+            <p className='title'>An "internationally renowned book blogger and USA Today blog columnist," Vilma Iris recommendations.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

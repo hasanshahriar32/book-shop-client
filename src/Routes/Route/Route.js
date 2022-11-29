@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
 import AllBooks from "../../Pages/AllBooks/AllBooks";
 import Blog from "../../Pages/Blog/Blog";
+import BookingModal from "../../Pages/BookingModal/BookingModal";
+import Dashboard from "../../Pages/Dashboard/Dashboard";
 import Error from "../../Pages/Error/Error";
 import Banner from "../../Pages/Home/Banner/Banner";
 import Login from "../../Pages/Login/Login";
@@ -34,6 +36,10 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             },
         ]
+    },
+    {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>
     },
 
     {path: '*', element: <Error></Error>}

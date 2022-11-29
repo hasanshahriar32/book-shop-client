@@ -5,7 +5,6 @@ import Books from './Books';
 const AllBooks = () => {
 
     const allbooks = useLoaderData();
-    console.log(allbooks)
 
     return (
         <Container>
@@ -17,6 +16,7 @@ const AllBooks = () => {
                 ></Books>)
             }
         </div>
+        
         </Container>
     );
 };
