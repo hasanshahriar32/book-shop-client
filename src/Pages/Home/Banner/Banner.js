@@ -33,11 +33,12 @@ const Banner = () => {
           </Carousel.Item>
         </Carousel>
             <section>
-                <Categories></Categories>
-            </section>
-            <section>
                 <About></About>
             </section>
+            <section>
+                <Categories></Categories>
+            </section>
+            
         </div>
 
     );

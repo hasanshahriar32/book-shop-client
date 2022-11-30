@@ -12,7 +12,7 @@ import './Header.css';
 import { AuthContext } from '../../../Context/UserContext';
 
 const Header = () => {
-  const {user, logOut} = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext);
     return (
         <Navbar style={{background: 'linear-gradient(to right, #0033cc 0%, #cc0099 100%)',}}   expand="lg">
       <Container>

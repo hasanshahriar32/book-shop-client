@@ -22,6 +22,7 @@ export const routes = createBrowserRouter([
                 path: '/allbooks/:id',
                 loader: ({params}) => fetch(`http://localhost:5000/allbooks/${params.id}`),
                 element: <AllBooks></AllBooks>
+                
             },
             {
                 path: '/blog',

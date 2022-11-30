@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import './BookingModal.css'
+import { AuthContext } from '../../Context/UserContext';
 
 const BookingModal = ({books}) => {
     const { name, location, original_price, resale_price, seller_name, years_of_use, img_url, category_id } = books;
+    const {user} = useContext(AuthContext)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -23,19 +25,19 @@ const BookingModal = ({books}) => {
         <Modal.Body>
         <Form>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Control type="text" placeholder="Name" />
+        <Form.Control type="text" defaultValue={user?.displayName} disabled  />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Control type="email" placeholder="name@email.com" />
+        <Form.Control type="email" defaultValue={user?.email} disabled  />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Control type="number" placeholder="Number" />
+        <Form.Control type="text"  defaultValue={`Price: ${resale_price}`} disabled/>
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Control type="email" placeholder="name@example.com" />
+        <Form.Control type="text" placeholder="Phone Number" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Control type="email" placeholder="name@example.com" />
+        <Form.Control type="text" placeholder="Address" />
       </Form.Group>
 
     </Form>
