@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import PrivateRoute from '../../Routes/PriveteRoute/PrivateRoute';
 import BookingModal from '../BookingModal/BookingModal';
 
 const Books = ({books}) => {
-    const { name, location, original_price, resale_price, seller_name, years_of_use, img_url, category_id } = books;
+    const { name, location, original_price, resale_price, seller_name, years_of_use, img_url } = books;
     return (
         <Card >
             <Card.Img className='img_container' variant="top" src={img_url} />
@@ -15,10 +15,11 @@ const Books = ({books}) => {
                 <h4>Resell Price: {resale_price}</h4>
                 <h6>Uses: {years_of_use}</h6>
                 <h6>Seller Name: {seller_name}</h6>
+                <PrivateRoute>
                 <BookingModal
-                    books={books}                
-                >
-                </BookingModal>
+                    books={books}      
+                    ></BookingModal>
+                </PrivateRoute>
             </Card.Body>
           </Card>
     );

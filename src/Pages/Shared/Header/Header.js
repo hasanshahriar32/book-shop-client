@@ -23,8 +23,6 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto nav-item text-white">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/services">Catagories</Nav.Link>
-            <Nav.Link as={Link} to="/my-reviews">My Order</Nav.Link>
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
           </Nav>
           <Nav >

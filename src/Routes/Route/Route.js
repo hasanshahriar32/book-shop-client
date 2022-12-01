@@ -1,9 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashBoard from "../../Layout/DashBoard";
 import Main from "../../Layout/Main";
 import AllBooks from "../../Pages/AllBooks/AllBooks";
 import Blog from "../../Pages/Blog/Blog";
-import BookingModal from "../../Pages/BookingModal/BookingModal";
-import Dashboard from "../../Pages/Dashboard/Dashboard";
 import Error from "../../Pages/Error/Error";
 import Banner from "../../Pages/Home/Banner/Banner";
 import Login from "../../Pages/Login/Login";
@@ -35,13 +34,19 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },{
+                path: '/dashboard',
+                element: <DashBoard></DashBoard>,
+                children: [
+                    {
+                        path: ''
+                    }
+
+                ]
             },
         ]
     },
-    {
-        path: '/dashboard',
-        element: <Dashboard></Dashboard>
-    },
+    
 
     {path: '*', element: <Error></Error>}
 ])

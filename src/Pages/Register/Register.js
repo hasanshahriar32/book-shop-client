@@ -42,7 +42,7 @@ const Register = () => {
             form.reset();
             navigate(from, {replace: true});
             const currentUser = {
-                name: userName,
+                userName: userName,
                 userEmail: email,
                 roleIndentify: role,
 
@@ -93,7 +93,6 @@ const Register = () => {
                             <input className='me-2' onChange={handleChange}  type="radio" id="s-option" name='selector' value='Seller' checked={role === "Seller"} />
                             <label for="s-option">Seller</label>
                             <div class="check">
-                                <div class="inside"></div>
                             </div>
                         </li>
                     </ul>
