@@ -9,7 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const BookingModal = ({books}) => {
     const { name,  resale_price } = books;
-    const {user} = useContext(AuthContext)
+    const {user} = useContext(AuthContext);
+    // console.log(user)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -63,7 +64,6 @@ const BookingModal = ({books}) => {
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
           if(data.acknowledged){
               toast.success('Booking Confirmed')
               event.target.reset();

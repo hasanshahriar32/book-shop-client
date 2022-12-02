@@ -5,16 +5,16 @@ import UseRole from "../../../UseRole/UseRole";
 
 
 const SideNav = () => {
-  let { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   console.log(user);
-  let [userRole] = UseRole(user);
-//   console.log(userRole);
+  const [userRole] = UseRole(user);
+  console.log(userRole);
   return (
     <div className="sidenav">
 
       {userRole === "Seller" || userRole === "admin" ? (
         <>
-          {userRole === "admin" && (
+          {userRole === "admin"  && (
             <>
               <p>
                 <Link to="allseller">All Seller</Link>
@@ -28,18 +28,20 @@ const SideNav = () => {
             </>
           )}
 
-          {userRole === "Seller" && (
+          {userRole === "Seller"  && (
             <>
               <p>
                 <Link to="addproduct">Added Product</Link>
               </p>
               <p>
-                <Link to={`myproudct/${user?.email}`}>My Product</Link>
+                <Link to="myproudct">My Product</Link>
               </p>
             </>
           )}
         </>
-      ) : (
+      ) 
+      : 
+      (
         <>
           {(userRole === "Buyer" || user?.uid) && (
             <p>

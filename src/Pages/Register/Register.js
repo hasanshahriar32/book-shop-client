@@ -4,8 +4,11 @@ import Form from 'react-bootstrap/Form';
 import './Register.css'
 import { AuthContext } from '../../Context/UserContext';
 import Loader from '../Utilities/Loader/Loader';
+import UseRole from '../../UseRole/UseRole';
+import { getAuth, updateProfile } from 'firebase/auth';
+import app from '../../Firebase/Firebase.config';
 
-
+const auth = getAuth(app)
 const Register = () => {
     let title = "Book Shop -Register";
     document.title = title;
@@ -39,6 +42,15 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            updateProfile(auth.currentUser, {
+                displayName: userName
+              })
+                .then(() => {
+                  console.log("profile updated");
+                })
+                .catch((error) => {
+                  console.log(error);
+                });
             form.reset();
             navigate(from, {replace: true});
             const currentUser = {
