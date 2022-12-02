@@ -34,7 +34,7 @@ const SideNav = () => {
                 <Link to="addproduct">Added Product</Link>
               </p>
               <p>
-                <Link to="myproudct">My Product</Link>
+                <Link to={`myproudct/${user?.email}`}>My Product</Link>
               </p>
             </>
           )}

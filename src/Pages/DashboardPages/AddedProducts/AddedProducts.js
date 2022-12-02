@@ -19,10 +19,7 @@ const AddedProducts = () => {
     const image = form.img.value;
     const originalPrice = form.originalPrice.value;
     const resalePrice = form.resalePrice.value;
-    const description = form.description.value;
-    const purchaseYear = form.yearOfPurchase.value;
     const usedYears = form.yearsOfUse.value;
-    const phone = form.phone.value;
     const location = form.location.value;
     const condition = form.group1.value;
     const status = form.status.value;
@@ -34,18 +31,15 @@ const AddedProducts = () => {
     const product = {
       category_id: categoryId,
       name,
-      img: image,
+      img_url: image,
       condition,
       time: new Date(),
       seller_email: user.email,
       seller_name: user.displayName,
-      phone: phone,
       location: location,
       resale_price: resalePrice,
       original_price: originalPrice,
       years_of_use: usedYears,
-      purchase_year: purchaseYear,
-      description: description,
       status,
     };
     console.log(product);
@@ -114,42 +108,12 @@ const AddedProducts = () => {
                 required
               />
             </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label className="text-black">Description:</Form.Label>
-              <Form.Control
-                as="textarea"
-                name="description"
-                rows={3}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className="text-black">Year of Purchase: </Form.Label>
-              <Form.Control
-                type="text"
-                name="yearOfPurchase"
-                placeholder="Year of Purchase"
-                required
-              />
-            </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label className="text-black">Years of Use:</Form.Label>
               <Form.Control
                 type="text"
                 name="yearsOfUse"
                 placeholder="Years of Use"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className="text-black">Phone Number:</Form.Label>
-              <Form.Control
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
                 required
               />
             </Form.Group>

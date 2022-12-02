@@ -47,10 +47,12 @@ export const routes = createBrowserRouter([
                 children: [
                     {
                         path: 'allbuyers',
+                        loader: () => fetch(`http://localhost:5000/member/Buyer`),
                         element: <Allbuyers></Allbuyers>,
                     },
                     {
                         path: 'allseller',
+                        loader: () => fetch(`http://localhost:5000/member/Seller`),
                         element: <Allseller></Allseller>,
                     },
                     {
@@ -67,7 +69,8 @@ export const routes = createBrowserRouter([
                         element: <AddedProducts></AddedProducts>,
                     },
                     {
-                        path: 'myproudct',
+                        path: 'myproudct/:email',
+                        loader: ({params}) => fetch(`http://localhost:5000/allbook/${params.email}`),
                         element: <MyProducts></MyProducts>
                     },
                     

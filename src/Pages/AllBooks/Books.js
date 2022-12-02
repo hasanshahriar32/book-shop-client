@@ -11,9 +11,9 @@ const Books = ({books}) => {
             <Card.Body>
                 <h2>{name}</h2>
                 <h6>Location: {location}</h6>
-                <h6>Product Price: {original_price}</h6>
-                <h4>Resell Price: {resale_price}</h4>
-                <h6>Uses: {years_of_use}</h6>
+                <h6>Product Price: $ {original_price}</h6>
+                <h4>Resell Price: $ {resale_price}</h4>
+                <h6>Uses: {years_of_use} years</h6>
                 <h6>Seller Name: {seller_name}</h6>
                 <PrivateRoute>
                 <BookingModal
