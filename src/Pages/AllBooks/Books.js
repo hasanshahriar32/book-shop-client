@@ -12,7 +12,7 @@ const Books = ({books}) => {
           item_id: _id,
           time: new Date(),
         };
-        fetch(`http://localhost:5000/reported/${_id}`, {
+        fetch(`https://book-shop-server.vercel.app/reported/${_id}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

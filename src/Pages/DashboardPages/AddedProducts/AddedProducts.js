@@ -43,7 +43,7 @@ const AddedProducts = () => {
       status,
     };
     console.log(product);
-    fetch("http://localhost:5000/allbooks", {
+    fetch("https://book-shop-server.vercel.app/allbooks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -61,7 +61,7 @@ const AddedProducts = () => {
       });
   };
   useEffect(() => {
-    fetch("http://localhost:5000/category")
+    fetch("https://book-shop-server.vercel.app/category")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

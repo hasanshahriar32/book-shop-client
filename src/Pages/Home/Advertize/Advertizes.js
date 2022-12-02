@@ -7,7 +7,7 @@ const Advertizes = () => {
     const [advertize, setAdvertize] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/advertize`)
+        fetch(`https://book-shop-server.vercel.app/advertize`)
       .then((res) => res.json())
       .then((data) => setAdvertize(data));
     }, [])

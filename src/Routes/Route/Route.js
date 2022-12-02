@@ -26,7 +26,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/allbooks/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/allbooks/${params.id}`),
+                loader: ({params}) => fetch(`https://book-shop-server.vercel.app/allbooks/${params.id}`),
                 element: <AllBooks></AllBooks>
                 
             },
@@ -47,22 +47,22 @@ export const routes = createBrowserRouter([
                 children: [
                     {
                         path: 'allbuyers',
-                        loader: () => fetch(`http://localhost:5000/member/Buyer`),
+                        loader: () => fetch(`https://book-shop-server.vercel.app/member/Buyer`),
                         element: <Allbuyers></Allbuyers>,
                     },
                     {
                         path: 'allseller',
-                        loader: () => fetch(`http://localhost:5000/member/Seller`),
+                        loader: () => fetch(`https://book-shop-server.vercel.app/Seller`),
                         element: <Allsellers></Allsellers>,
                     },
                     {
                         path: 'reportitem',
-                        loader: () => fetch(`http://localhost:5000/reported`),
+                        loader: () => fetch(`https://book-shop-server.vercel.app/reported`),
                         element: <Reportitem></Reportitem>,
                     },
                     {
                         path: 'myorders/:email',
-                        loader: ({params}) => fetch(`http://localhost:5000/orders/${params.email}`), 
+                        loader: ({params}) => fetch(`https://book-shop-server.vercel.app/orders/${params.email}`), 
                         element: <MyOrders></MyOrders>,
                     },
                     {
@@ -71,7 +71,7 @@ export const routes = createBrowserRouter([
                     },
                     {
                         path: 'myproudct/:email',
-                        loader: ({params}) => fetch(`http://localhost:5000/allbook/${params.email}`),
+                        loader: ({params}) => fetch(`https://book-shop-server.vercel.app/allbook/${params.email}`),
                         element: <MyProducts></MyProducts>
                     },
                     

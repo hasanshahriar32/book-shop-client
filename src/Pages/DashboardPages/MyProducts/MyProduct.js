@@ -15,7 +15,7 @@ const MyProduct = ({my_pro}) => {
           original_price: original_price,
           years_of_use: years_of_use,
         };
-        fetch("http://localhost:5000/advertize", {
+        fetch("https://book-shop-server.vercel.app/advertize", {
           method: "POST",
           headers: {
             "content-type": "application/json",
