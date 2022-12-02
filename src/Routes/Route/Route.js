@@ -52,7 +52,7 @@ export const routes = createBrowserRouter([
                     },
                     {
                         path: 'allseller',
-                        loader: () => fetch(`https://book-shop-server.vercel.app/Seller`),
+                        loader: () => fetch(`https://book-shop-server.vercel.app/member/Seller`),
                         element: <Allsellers></Allsellers>,
                     },
                     {
