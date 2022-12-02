@@ -4,7 +4,31 @@ import PrivateRoute from '../../Routes/PriveteRoute/PrivateRoute';
 import BookingModal from '../BookingModal/BookingModal';
 
 const Books = ({books}) => {
-    const { name, location, original_price, resale_price, seller_name, years_of_use, img_url } = books;
+    const {_id, name, location, original_price, resale_price, seller_name, years_of_use, img_url } = books;
+    const handleReportToAdmin = (_id) => {
+        const reportedItem = {
+          name: name,
+          img_url: img_url,
+          item_id: _id,
+          time: new Date(),
+        };
+        fetch(`http://localhost:5000/reported/${_id}`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(reportedItem),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.acknowledged) {
+              alert("Successfully Reported!");
+            } else {
+              alert("Something went worng.");
+            }
+          })
+          .catch((err) => console.error(err));
+      };
     return (
         <Card >
             <Card.Img className='img_container' variant="top" src={img_url} />
@@ -19,6 +43,7 @@ const Books = ({books}) => {
                 <BookingModal
                     books={books}      
                     ></BookingModal>
+                    <button onClick={() => handleReportToAdmin(_id)} className='book_btn ms-2'>Reported Item</button>
                 </PrivateRoute>
             </Card.Body>
           </Card>

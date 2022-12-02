@@ -1,12 +1,19 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import './Allseller.css'
 
-const Allseller = () => {
-    const allseller = useLoaderData();
-    console.log(allseller)
+const Allseller = ({allsell}) => {
+    
+    const{userName, userEmail} = allsell;
     return (
         <div>
-            <h3>allseller</h3>
+            <div className='allseller_containers'>
+                <div>
+                    <span className='ps-1'>Seller Name: {userName}</span>
+                </div>
+                <div>
+                <span className='ps-1'>Seller Email: {userEmail}</span>
+                </div>
+            </div>
         </div>
     );
 };

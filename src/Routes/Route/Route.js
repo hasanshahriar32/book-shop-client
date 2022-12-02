@@ -5,7 +5,7 @@ import AllBooks from "../../Pages/AllBooks/AllBooks";
 import Blog from "../../Pages/Blog/Blog";
 import AddedProducts from "../../Pages/DashboardPages/AddedProducts/AddedProducts";
 import Allbuyers from "../../Pages/DashboardPages/Allbuyers/Allbuyers";
-import Allseller from "../../Pages/DashboardPages/Allseller/Allseller";
+import Allsellers from "../../Pages/DashboardPages/Allseller/Allsellers";
 import MyOrders from "../../Pages/DashboardPages/MyOrders/MyOrders";
 import MyProducts from "../../Pages/DashboardPages/MyProducts/MyProducts";
 import Reportitem from "../../Pages/DashboardPages/Reportitem/Reportitem";
@@ -53,10 +53,11 @@ export const routes = createBrowserRouter([
                     {
                         path: 'allseller',
                         loader: () => fetch(`http://localhost:5000/member/Seller`),
-                        element: <Allseller></Allseller>,
+                        element: <Allsellers></Allsellers>,
                     },
                     {
                         path: 'reportitem',
+                        loader: () => fetch(`http://localhost:5000/reported`),
                         element: <Reportitem></Reportitem>,
                     },
                     {

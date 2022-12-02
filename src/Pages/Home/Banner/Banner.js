@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import './Banner.css';
 import About from '../About/About';
 import Categories from '../Category/Categories';
+import Advertze from '../Advertize/Advertze';
+import Advertizes from '../Advertize/Advertizes';
 
 const Banner = () => {
     return (
@@ -34,6 +36,9 @@ const Banner = () => {
         </Carousel>
             <section>
                 <About></About>
+            </section>
+            <section>
+                <Advertizes></Advertizes>
             </section>
             <section>
                 <Categories></Categories>

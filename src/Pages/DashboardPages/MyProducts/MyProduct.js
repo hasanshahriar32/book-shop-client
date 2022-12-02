@@ -15,7 +15,7 @@ const MyProduct = ({my_pro}) => {
           original_price: original_price,
           years_of_use: years_of_use,
         };
-        fetch("/advertise", {
+        fetch("http://localhost:5000/advertize", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -39,7 +39,7 @@ const MyProduct = ({my_pro}) => {
                 <h4>Resell Price: $ {resale_price}</h4>
                 <h6>Uses: {years_of_use} years</h6>
                 <h6>Seller Name: {seller_name}</h6>
-                <button onClick={() => handleAdvertise(_id)}>Advertize</button>
+                <button className='book_btn' onClick={() => handleAdvertise(_id)}>Advertize</button>
             </Card.Body>
           </Card>
     );

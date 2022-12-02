@@ -6,9 +6,7 @@ import UseRole from "../../../UseRole/UseRole";
 
 const SideNav = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
   const [userRole] = UseRole(user);
-  console.log(userRole);
   return (
     <div className="sidenav">
 
